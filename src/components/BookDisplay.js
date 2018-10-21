@@ -8,13 +8,20 @@ function BookDisplay(props) {
 
   return (
     <div className="book">
-      Book {props.id}
-      <h3>{props.title}</h3>
-      <h4>{props.author} | published date: {props.date}</h4>
+      {/* Book {props.id} */}
+      <div className="book-title">
+        <h3>{props.title}</h3>
+        <h4>{props.author} </h4>
+        <h4>published date: {props.date}</h4>
+        {/* <p>{props.description}</p> */}
 
-      {/* <p>{props.description}</p> */}
-      <img src={props.img} />
-      <button onClick={addBook}>Add</button>
+      </div>
+
+      <div className="img-btn">
+        <img src={props.img} />
+        <button className="add-btn" onClick={addBook}>Add</button>
+      </div>
+
     </div>
   )
 }
