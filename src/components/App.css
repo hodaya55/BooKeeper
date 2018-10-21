@@ -1,10 +1,10 @@
 .App {
   text-align: center;
+  /* background: #4d394b; */
 }
 
 .App-header {
   /* background-color: #282c34; */
-  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,11 +22,11 @@
 }
 
 .book {
-  flex: 0 0 10%;
-  padding: 6px;
+  flex: 1 0 10%;
+  padding: 2px 13px 9px 13px;
   margin: 10px;
-  box-shadow: 3px 4px 7px 4px #510606bd;
-  background-color: #ffe2e2bf;
+  box-shadow: 3px 4px 7px #555;
+  /* background-color: #ffe2e2bf; */
   border-radius: 5px;
 }
 
@@ -35,10 +35,10 @@
 .img-btn {
   position: relative;
   /* width: 50%; */
+  /* width: 300px; */
+  height: 300px;
   margin-bottom: 0;
   padding: 0;
-  height: 300px;
-  /* width: 300px; */
 }
 
 /* Style the button and place it in the bottom-middle of the container/image */
@@ -59,7 +59,7 @@
 }
 
 .img-btn .add-btn:hover {
-  background-color: black;
+  background-color: rgb(97, 3, 3)
 }
 
 /* Make the image responsive */
@@ -70,9 +70,24 @@
   bottom: 0; */
   width: 250px;
   height: 300px;
+  filter: grayscale(0.95);
 }
 
-.book-title {
+.img-btn img:hover {
+  filter: grayscale(0);
+  box-shadow: 3px 4px 7px 3px #555;
+}
+
+.book-title h3 {
   /* position: relative;
   margin: 0; */
+  color: rgb(97, 3, 3);
+  letter-spacing: 0.5px;
+}
+
+.book-title h4 {
+  color: #555;
+  filter: contrast(0.4);
+  padding: 0;
+  margin: 3px;
 }
