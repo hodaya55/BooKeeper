@@ -34,7 +34,7 @@ class App extends Component {
       <div className="App">
         <div className="fixed-serach">
           <header className="App-header">
-            Book
+            The Library Books
         </header>
           <SearchBar updateSerachResult={this.updateSerachResult} />
         </div>
