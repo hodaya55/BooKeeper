@@ -22,8 +22,8 @@ export default class SearchBar extends Component {
             author: b.volumeInfo.authors ? b.volumeInfo.authors[0] : 'no',
             date: b.volumeInfo.publishedDate,
             title: b.volumeInfo.title,
-            img: b.volumeInfo.imageLinks.smallThumbnail,
-            bigImg: b.volumeInfo.imageLinks.thumbnail,
+            img: b.volumeInfo.imageLinks ? b.volumeInfo.imageLinks.smallThumbnail : 'no',
+            bigImg: b.volumeInfo.imageLinks ? b.volumeInfo.imageLinks.thumbnail : 'no',
             description: b.volumeInfo.description,
             id: b.id
           }
