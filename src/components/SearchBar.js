@@ -19,7 +19,7 @@ export default class SearchBar extends Component {
         // console.log(books);
         return books.items.map(b => {
           const bookInfo = {
-            author: b.volumeInfo.authors[0],
+            author: b.volumeInfo.authors ? b.volumeInfo.authors[0] : 'no',
             date: b.volumeInfo.publishedDate,
             title: b.volumeInfo.title,
             img: b.volumeInfo.imageLinks.smallThumbnail,

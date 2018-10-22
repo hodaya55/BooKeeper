@@ -8,7 +8,7 @@ export default class BookListResult extends Component {
       <div className="book-list-result">
         {/* BookListResult */}
         {this.props.booksResult.length > 0 ?
-          "There is books" && this.props.booksResult.map(book => <BookDisplay key={book.id} {...book} />)
+          "There is books" && this.props.booksResult.map(book => <BookDisplay key={book.id} {...book} book={book} addBook={this.props.addBook} />)
           : "Nothing Found."}
       </div>
     )

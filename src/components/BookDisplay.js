@@ -2,8 +2,7 @@ import React from 'react'
 
 function BookDisplay(props) {
   const addBook = () => {
-    console.log('added book');
-
+    props.addBook(props.book);
   }
 
   return (
@@ -11,15 +10,16 @@ function BookDisplay(props) {
       {/* Book {props.id} */}
       <div className="book-title">
         <h3>{props.title}</h3>
-        <h4>{props.author} </h4>
-        <h4>published date: {props.date}</h4>
+        {props.author === 'no' ?
+          <h4>Not Found Author </h4> :
+          <h4>By {props.author} </h4>}
         {/* <p>{props.description}</p> */}
-
       </div>
 
       <div className="img-btn">
-        <img src={props.img} />
+        <img src={props.img} alt={props.title + "image"} />
         <button className="add-btn" onClick={addBook}>Add</button>
+        <h4>published on {props.date}</h4>
       </div>
 
     </div>
