@@ -68,7 +68,8 @@
 }
 
 .book-save-list-result {
-  position: absolute;
+  /* position: absolute; */
+  position: relative;
   display: flex;
   justify-content: center;
   justify-items: center;
@@ -189,6 +190,10 @@
   overflow-y: auto;
   overflow-wrap: break-word;
   margin: auto auto;
+}
+
+.book-title h4 {
+  margin: auto;
 }
 
 .img-btn h4 {
