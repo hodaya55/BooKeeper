@@ -4,18 +4,71 @@
 }
 
 .App-header {
-  /* background-color: #282c34; */
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: center; */
   font-size: 50px;
   color: white;
   background-color: rgb(97, 3, 3);
+  line-height: 80px;
+}
+
+.fixed-serach {
+  width: 100%;
+  position: fixed;
+  z-index: 200;
+}
+
+.serach-book-bar {
+  /* margin: 20px; */
+  padding: 10px;
+  background-color: rgb(97, 3, 3);
+  margin: 0 auto;
+}
+
+.input-serach {
+  /* line-height: 58px; */
+  width: 50%;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-right: 5px;
+}
+
+.btn-serach {
+  background: rgb(97, 3, 3);
+  color: white;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  line-height: 60px;
+  cursor: pointer;
+  text-align: center;
+  border: 2px solid white;
+  font-weight: bolder;
+  box-shadow: inset 0 0 5px 2px white;
+}
+
+.btn-serach:hover {
+  background: white;
+  color: rgb(97, 3, 3);
+  font-weight: bolder;
 }
 
 .book-list-result {
-  margin: 25px 90px;
+  /* margin: 25px 90px; */
+  /* position: absolute; */
+  position: inherit;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  padding-top: 165px;
+}
+
+.book-save-list-result {
+  position: absolute;
   display: flex;
   justify-content: center;
   justify-items: center;
@@ -34,6 +87,34 @@
   display: flex;
   height: 250px;
   /* box-sizing: border-box; */
+  -webkit-animation: swirl-in-fwd 0.8s ease-out both;
+  animation: swirl-in-fwd 0.8s ease-out both;
+}
+
+@-webkit-keyframes swirl-in-fwd {
+  0% {
+    -webkit-transform: rotate(-540deg) scale(0);
+    transform: rotate(-540deg) scale(0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotate(0) scale(1);
+    transform: rotate(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes swirl-in-fwd {
+  0% {
+    -webkit-transform: rotate(-540deg) scale(0);
+    transform: rotate(-540deg) scale(0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotate(0) scale(1);
+    transform: rotate(0) scale(1);
+    opacity: 1;
+  }
 }
 
 .save-book {
@@ -71,6 +152,7 @@
   font-size: 16px;
   padding: 12px 24px;
   /* border: none; */
+  border: 1px solid rgba(0, 0, 0, 0.59);
   cursor: pointer;
   border-radius: 5px;
 }
@@ -111,5 +193,6 @@
 
 .img-btn h4 {
   margin: 0 auto;
-  filter: contrast(0.1);
+  color: rgba(255, 255, 255, 0.761);
+  /* filter: contrast(0.6); */
 }

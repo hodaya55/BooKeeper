@@ -3,10 +3,11 @@ import React from 'react'
 function SaveBooks(props) {
   return (
     <React.Fragment>
+      {/* <div className="save-area"> */}
       <h2>
         save books area
       </h2>
-      <div className="book-list-result">
+      <div className="book-save-list-result">
         {props.books.map(b =>
           <div className="book" key={b.id}>
             <div className="book-title">
@@ -22,6 +23,7 @@ function SaveBooks(props) {
           </div>
         )}
       </div>
+      {/* </div> */}
     </React.Fragment>
   )
 }

@@ -19,7 +19,7 @@ class App extends Component {
 
   addBook = (book) => {
     if (this.state.addedBooks.includes(book)) {
-      alert('The book already in your saves books.')
+      alert('The book is already in your saves books.')
       return;
     }
 
@@ -32,12 +32,14 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          Book
+        <div className="fixed-serach">
+          <header className="App-header">
+            Book
         </header>
-        <SearchBar updateSerachResult={this.updateSerachResult} />
+          <SearchBar updateSerachResult={this.updateSerachResult} />
+        </div>
         {this.state.booksResult.length > 0 && <BookListResult booksResult={this.state.booksResult} addBook={this.addBook} />}
-        <SaveBooks books={this.state.addedBooks} />
+        {this.state.addedBooks.length > 0 && <SaveBooks books={this.state.addedBooks} />}
       </div>
     );
   }
